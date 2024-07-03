@@ -1,0 +1,46 @@
+<!-- trabajadores-tabla.component.html -->
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Lista de Trabajadores</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-table [dataSource]="trabajadores">
+      <!-- ID Column -->
+      <ng-container matColumnDef="idTrabajador">
+        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-cell *matCellDef="let trabajador">{{ trabajador.idTrabajador }}</mat-cell>
+      </ng-container>
+
+      <!-- Nombre Column -->
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let trabajador">{{ trabajador.nombre }}</mat-cell>
+      </ng-container>
+
+      <!-- Apellidos Column -->
+      <ng-container matColumnDef="apellidos">
+        <mat-header-cell *matHeaderCellDef>Apellidos</mat-header-cell>
+        <mat-cell *matCellDef="let trabajador">{{ trabajador.apellidos }}</mat-cell>
+      </ng-container>
+
+      <!-- Agrega más columnas según tus necesidades -->
+
+      <!-- Acciones Column -->
+      <ng-container matColumnDef="acciones">
+        <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
+        <mat-cell *matCellDef="let trabajador">
+          <button mat-icon-button color="primary" (click)="editarTrabajador(trabajador.idTrabajador)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="eliminarTrabajador(trabajador.idTrabajador)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+      <mat-row *matRowDef="let fila; columns: columnas;"></mat-row>
+    </mat-table>
+  </mat-card-content>
+</mat-card>

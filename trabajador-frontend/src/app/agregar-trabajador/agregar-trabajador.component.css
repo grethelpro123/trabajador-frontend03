@@ -1,0 +1,60 @@
+/* agregar-trabajador.component.css */
+
+.modal-titulo {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-contenido {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input-group-addon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Estilo para el botón */
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .cerrar {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .cerrar:hover {
+    color: #ccc;
+  }
+  

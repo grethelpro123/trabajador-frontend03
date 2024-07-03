@@ -1,0 +1,57 @@
+<!-- agregar-trabajador.component.html -->
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Agregar Trabajador</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- Formulario para agregar trabajador -->
+    <form (ngSubmit)="guardarTrabajador()">
+      <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="nuevoTrabajador.nombre" name="nombre" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Apellidos" [(ngModel)]="nuevoTrabajador.apellidos" name="apellidos" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Género" [(ngModel)]="nuevoTrabajador.genero" name="genero" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Fecha de Nacimiento" [(ngModel)]="nuevoTrabajador.fechaNac" name="fechaNac"  required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Número de Documento" [(ngModel)]="nuevoTrabajador.numeroDocumento" name="numeroDocumento" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Dirección" [(ngModel)]="nuevoTrabajador.direccion" name="direccion" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Teléfono" [(ngModel)]="nuevoTrabajador.telefono" name="telefono" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="nuevoTrabajador.email" name="email" type="email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Acceso" [(ngModel)]="nuevoTrabajador.acceso" name="acceso" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Usuario" [(ngModel)]="nuevoTrabajador.usuario" name="usuario" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Clave" [(ngModel)]="nuevoTrabajador.clave" name="clave" type="password" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </form>
+  </mat-card-content>
+</mat-card>
